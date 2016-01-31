@@ -1,14 +1,22 @@
 {
   "name": "select2-Flat_Theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "author": {
+    "name": "Techhysahil",
+    "url": "http://techhysahil.com/"
+  },
   "description": "Select2 Flat Theme",
   "dependencies": {
+    "grunt-contrib-less": "^1.1.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-sass": "^1.1.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2"
   },
+  "keywords": [
+    "Select2-Flat-Theme"
+  ],
   "engines": {
     "node": ">=0.8.15"
   }

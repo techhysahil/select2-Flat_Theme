@@ -5,12 +5,12 @@ module.exports = function(grunt) {
                 sourceMap: false,
                 sourceComments: false
             },
-            staging: {
+            development: {
                 options: {
                     outputStyle: 'nested',
                 },
                 files: {
-                    'dist/select2-flat-theme.css': 'src/layout.scss'
+                    'dist/select2-flat-theme.css': 'src/sass/layout.scss'
                 }
             },
             production: {
@@ -18,22 +18,52 @@ module.exports = function(grunt) {
                     outputStyle: 'compressed',
                 },
                 files: {
-                    'dist/select2-flat-theme.min.css': 'src/layout.scss'
+                    'dist/select2-flat-theme.min.css': 'src/sass/layout.scss'
+                }
+            }
+        },
+        less: {
+            development: {
+                options: {
+                    paths: ["src/less"]
+                },
+                files: {
+                    "dist/select2-flat-theme.css": "src/less/layout.less"
+                }
+            },
+            production: {
+                options: {
+                    paths: ["src/less"],
+                    compress : true
+                },
+                files: {
+                    "dist/select2-flat-theme.min.css": "src/less/layout.less"
                 }
             }
         },
         watch: {
-            css: {
-                files: 'src/**/*.scss',
+            sass: {
+                files: 'src/sass/**/*.scss',
                 tasks: ['sass']
+            },
+            less: {
+                files: 'src/less/**/*.less',
+                tasks: ['less']
             }
+
         }
     });
 
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
-    grunt.registerTask('dev', ['sass:staging']);
-    grunt.registerTask('build', ['sass:production']);
+    //Sass Task
+    grunt.registerTask('sass-Dev', ['sass:development']);
+    grunt.registerTask('sass-Build', ['sass:production']);
+
+    //Less Task
+    grunt.registerTask('less-Dev', ['less:development']);
+    grunt.registerTask('less-Build', ['less:production']);
 
 };
