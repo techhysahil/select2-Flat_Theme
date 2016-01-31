@@ -23,6 +23,7 @@ To apply the theme, apply Flat theme for Select2 by changing the options:
 ###### 0.0.2
 
  * Added less source
+
 ###### 0.0.1
 
  * Added sass version.
