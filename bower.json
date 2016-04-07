@@ -1,0 +1,21 @@
+{
+  "name": "select2-Flat_Theme",
+  "description": "Select2 Flat Theme",
+  "main": "",
+  "authors": [
+    "Techhysahil <sahilkkrazy@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Select2-Flat-Theme"
+  ],
+  "homepage": "https://github.com/techhysahil/select2-Flat_Theme",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
